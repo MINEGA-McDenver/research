@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTIMIDATION</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            margin-top: 56px; /* Space for fixed navbar */
+            background-image: url('Forensic-psychology-1.jpg'); /* Background image */
+            background-size: cover; /* Cover the entire body */
+            background-position: center; /* Center the background image */
+            color: white; /* Text color */
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Full height */
+        }
+        .main-card {
+            margin-bottom: 30px; /* Space below the main card */
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7); /* Dark background with transparency */
+            border-radius: 10px;
+        }
+        .link-card {
+            background-color: white; /* White background */
+            color: darkslategray; /* Dark text color */
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            padding: 20px; /* Reduced padding for smaller height */
+            width: 100%; /* Full width for responsiveness */
+            max-width: 300px; /* Max width to maintain size */
+            margin: 10px; /* Space between cards */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+        }
+        .link-card:hover {
+            background-color: blue; /* Blue background on hover */
+            color: white; /* White text on hover */
+        }
+        .footer-section {
+            width: 100%; /* Full width */
+            background-color: #343a40; /* Dark background */
+            padding: 20px 0; /* Padding for top and bottom */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark mt-0 fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">HOME</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">PDF FILES</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index1.html">WHY VICTIMS OF RAPING FAILED TO REPORT IT</a></li>
+                            <li><a class="dropdown-item" href="index.html">INTIMIDATION IN RELATION TO LAWS</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">OUR RESEARCHES</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="about_raping.html">WHY VICTIMS OF RAPING FAIL TO REPORT IT</a></li>
+                          <li><a class="dropdown-item" href="intimidation.html">INTIMIDATION</a></li>
+                        </ul>
+                  </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about_us.html">ABOUT US</a>
+                    </li>
+                </ul>
+                <form class="d-flex" id="searchForm">
+                    <input class="form-control me-2" type="text" id="searchInput" placeholder="Search">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="main-card">
+            <h1>FORENSIC PSYCHOLOGY SCIENCE</h1>
+        </div>
+        <br>
+        <br>
+        <div class="row justify-content-evenly">
+            <div class="col-md-auto"> <!-- Use col-md-auto for dynamic sizing -->
+                <a href="about_raping.html" class="link-card">WHY VICTIMS OF RAPING FAILED TO REPORT IT</a>
+            </div>
+            <div class="col-md-auto">
+                <a href="intimidation.html" class="link-card">INTIMIDATION IN RELATION TO LAWS</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="footer-section">
+        <div class="container">
+            <div class="row">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about_us"><h5>Contact Us</h5></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about_us.html"><h5>About Us</h5></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about_us.html">Terms Of Use</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="row pb-5">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a href="#"> <i class="bi bi-instagram"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"> <i class="bi bi-twitter-x"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const pages = {
+            home: "home.html",
+            raping: "about_raping.html",
+            intimidation: "intimidation.html",
+            about: "about.html"
+        };
+
+        const searchForm = document.getElementById('searchForm');
+        const searchInput = document.getElementById('searchInput');
+
+        // Function to handle the search
+        searchForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const query = searchInput.value.toLowerCase();
+            if (query in pages) {
+                window.location.href = pages[query]; // Redirect to the corresponding page
+            } else {
+                alert("Your search did not find any results."); // Alert if not found
+            }
+        });
+    </script>
+</body>
+</html>
